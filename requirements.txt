@@ -1,0 +1,10 @@
+pandas
+numpy
+scipy
+Faker
+prophet
+scikit-learn
+streamlit
+plotly
+torch --index-url https://download.pytorch.org/whl/cpu
+xgboost
