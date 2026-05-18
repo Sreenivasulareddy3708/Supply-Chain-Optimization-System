@@ -1,6 +1,5 @@
-# Supply Chain Optimization System
-
-An integrated, data-driven supply chain decision framework that combines demand forecasting, inventory optimization, and supplier intelligence into a single interactive Streamlit dashboard.
+# LLM-Augmented Autonomous Supply Chain Intelligence Platform
+Upload raw enterprise data → AI cleans, validates, structures, forecasts demand, optimizes inventory, recommends suppliers, and explains decisions through an LLM-powered decision copilot.
 
 ---
 
@@ -24,48 +23,16 @@ An integrated, data-driven supply chain decision framework that combines demand 
 
 ## Overview
 
-Traditional supply chain systems suffer from siloed decision-making, reliance on manual planning, and static forecasting models that fail under volatile market conditions. This project addresses these limitations by building an **adaptive, integrated, and intelligent supply chain optimization system** that:
+An integrated, enterprise-grade GenAI + Machine Learning Supply Chain Optimization System that combines:
 
-- Predicts future demand using an **Error-Adaptive Ensemble** combining PatchTST (Transformer-based time-series) and XGBoost (residual correction)
-- Computes optimal inventory levels using **Safety Stock**, **Reorder Point (ROP)**, and **Reorder Quantity (ROQ)** calculations
-- Ranks and recommends suppliers using a **multi-criteria KPI scoring model** based on lead time, cost, reliability, and quality
-- Presents all insights in a unified **Streamlit interactive dashboard**
-
----
-
-## System Architecture
-
-```
-┌─────────────────────────────────────────────────────────────┐
-│                     Raw Data Layer                          │
-│   Historical Sales │ Inventory │ Supplier KPIs │ Shipments  │
-└────────────────────────┬────────────────────────────────────┘
-                         │
-                         ▼
-┌─────────────────────────────────────────────────────────────┐
-│              Data Preprocessing Pipeline                    │
-│        Cleaning │ Validation │ Feature Engineering          │
-└────────────────────────┬────────────────────────────────────┘
-                         │
-          ┌──────────────┼──────────────┐
-          ▼              ▼              ▼
-┌─────────────┐  ┌──────────────┐  ┌──────────────────────┐
-│   Demand    │  │  Inventory   │  │      Supplier        │
-│ Forecasting │  │ Optimization │  │   Recommendation     │
-│  Module     │  │   Module     │  │      Engine          │
-│             │  │              │  │                      │
-│ PatchTST +  │  │ Safety Stock │  │ Multi-Criteria KPI   │
-│  XGBoost    │  │  ROP │ ROQ   │  │   Scoring & Ranking  │
-│  Ensemble   │  │   EOQ        │  │                      │
-└──────┬──────┘  └──────┬───────┘  └──────────┬───────────┘
-       │                │                     │
-       └────────────────┼─────────────────────┘
-                        ▼
-          ┌─────────────────────────┐
-          │   Streamlit Dashboard   │
-          │  Integrated Decision UI │
-          └─────────────────────────┘
-```
+- LLM-Powered Raw Data Ingestion & Cleaning
+- Schema Mapping & Automated Data Validation
+- Demand Forecasting (PatchTST + XGBoost Error-Adaptive Ensemble)
+- Inventory Optimization (Safety Stock, ROP, ROQ)
+- Supplier Intelligence & Recommendation
+- RAG-Based Supplier Knowledge Assistant
+- Conversational Supply Chain Copilot
+- Interactive Streamlit Dashboard
 
 ---
 
@@ -267,17 +234,6 @@ The Streamlit dashboard provides:
 
 ---
 
-## Results
-
-| Model | MAE | RMSE | MAPE |
-|---|---|---|---|
-| Baseline Prophet | — | — | — |
-| PatchTST only | — | — | — |
-| **PatchTST + XGBoost Ensemble** | **Best** | **Best** | **Best** |
-
-> Detailed comparison results are available in `reports/comparison/TABLE_I_Overall_Performance.csv` and `TABLE_II_Volatility_Analysis.csv`.
-
----
 
 ## Tech Stack
 
